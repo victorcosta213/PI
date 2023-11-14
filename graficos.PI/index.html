@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <title>Gráficos</title>
+</head>
+<body>
+    <input type="file" id="csvFile1" accept=".csv">
+    <input type="file" id="csvFile2" accept=".csv">
+    <table id="dataTable"></table>
+    <div id="myChart" style="width: 600px; height: 400px;"></div>
+    <div id="combinedChart" style="width: 600px; height: 400px;"></div>
+    <div id="ageSumChart" style="width: 800px; height: 800px;"></div>
+    
+    <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawCharts);
+
+        const idade1 = {  
+            '25-35': 0,
+            '35-45': 0,
+            '45-55': 0,
+            '55-65': 0,
+            '65-75': 0,
+            '75-85': 0,
+            '15-25': 0, 
+        };
+
+        const idade2 = {  
+            '25-35': 0,
+            '35-45': 0,
+            '45-55': 0,
+            '55-65': 0,
+            '65-75': 0,
+            '75-85': 0,
+            '15-25': 0, 
+        };
+
+        document.getElementById('csvFile1').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const csvData = e.target.result;
+                    processData(csvData, idade1); 
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        document.getElementById('csvFile2').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const csvData = e.target.result;
+                    processData(csvData, idade2);  
+                };
+                reader.readAsText(file);
+            }
+        });
+
+        function processData(csvData, idade) {
+            const lines = csvData.split('\n');
+            const table = document.getElementById('dataTable');
+            table.innerHTML = '';
+
+            for (let i = 0; i < lines.length; i++) {
+                const row = table.insertRow(-1);
+                const cells = lines[i].split(',');
+
+                const age = parseInt(cells[2], 10);
+
+                if (!isNaN(age)) {
+                    if (age >= 15 && age < 25) {
+                        idade['15-25']++;
+                    } else if (age >= 25 && age < 35) {
+                        idade['25-35']++;
+                    } else if (age >= 35 && age < 45) {
+                        idade['35-45']++;
+                    } else if (age >= 45 && age < 55) {
+                        idade['45-55']++;
+                    } else if (age >= 55 && age < 65) {
+                        idade['55-65']++;
+                    } else if (age >= 65 && age < 75) {
+                        idade['65-75']++;
+                    } else if (age >= 75 && age < 85) {
+                        idade['75-85']++;
+                    }
+                }
+
+                for (let j = 0; j < cells.length; j++) {
+                    const cell = row.insertCell(-1);
+                    cell.innerHTML = cells[j];
+                }
+            }
+
+            drawCharts();
+        }
+
+        function drawCharts() {
+            const data1 = google.visualization.arrayToDataTable([
+                ['Idade', 'Quantidade'],
+                ['15-25', idade1['15-25']],
+                ['25-35', idade1['25-35']],
+                ['35-45', idade1['35-45']],
+                ['45-55', idade1['45-55']],
+                ['55-65', idade1['55-65']],
+                ['65-75', idade1['65-75']],
+                ['75-85', idade1['75-85']],
+            ]);
+
+            const data2 = google.visualization.arrayToDataTable([
+                ['Idade', 'Quantidade'],
+                ['15-25', idade2['15-25']],
+                ['25-35', idade2['25-35']],
+                ['35-45', idade2['35-45']],
+                ['45-55', idade2['45-55']],
+                ['55-65', idade2['55-65']],
+                ['65-75', idade2['65-75']],
+                ['75-85', idade2['75-85']],
+            ]);
+
+            const chart1 = new google.visualization.BarChart(document.getElementById('myChart'));
+            chart1.draw(data1, {
+                title: 'Gráfico do CSV 1',
+                legend: { position: 'top' }
+            });
+
+            const chart2 = new google.visualization.BarChart(document.getElementById('combinedChart'));
+            chart2.draw(data2, {
+                title: 'Gráfico do CSV 2',
+                legend: { position: 'top' }
+            });
+
+            const ageSum = {
+                '15-25': idade1['15-25'] + idade2['15-25'],
+                '25-35': idade1['25-35'] + idade2['25-35'],
+                '35-45': idade1['35-45'] + idade2['35-45'],
+                '45-55': idade1['45-55'] + idade2['45-55'],
+                '55-65': idade1['55-65'] + idade2['55-65'],
+                '65-75': idade1['65-75'] + idade2['65-75'],
+                '75-85': idade1['75-85'] + idade2['75-85'],
+            };
+
+            const ageSumData = google.visualization.arrayToDataTable([
+                ['Idade', 'Quantidade'],
+                ['15-25', ageSum['15-25']],
+                ['25-35', ageSum['25-35']],
+                ['35-45', ageSum['35-45']],
+                ['45-55', ageSum['45-55']],
+                ['55-65', ageSum['55-65']],
+                ['65-75', ageSum['65-75']],
+                ['75-85', ageSum['75-85']],
+            ]);
+
+            const chart3 = new google.visualization.PieChart(document.getElementById('ageSumChart'));
+            chart3.draw(ageSumData, {
+                title: 'Soma das Idades dos Dois CSVs',
+                pieHole: 0.4,
+            });
+        }
+    </script>
+</body>
+</html>
