@@ -1,0 +1,167 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.conteiner{
+    display: flex;
+    width: 100%;
+    height: 30%;
+    
+   
+}
+
+.child0{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:15% ;
+    background-color:#003857;
+    
+   
+}
+.filtro{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  border: solid black 1px;
+  font-family: "Poppins";
+  box-shadow: 1px 1px #003857;
+  border-radius: 10px;
+  height: 31px;
+  font-size: 10pt;
+  color: #003857;
+ 
+  
+
+}
+
+
+
+.child{
+    display: flex;
+    height: 60px;
+    width: 60%;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2px;
+   
+}
+
+.childtit{
+  height: 100px;
+  text-align: left;
+  width: 20%;
+  background-color: white;
+}
+
+
+
+.child1{
+    height: 350px;
+    width: 50%;
+    background-color: white;
+    
+}
+
+.child2{
+    height: 250px;
+    width: 29%;
+    background-color:white;
+    
+}
+
+.norte {
+    fill: #003857;
+  }
+  .nordeste {
+    fill: #003857;
+  }
+  .centro-oeste {
+    fill: #003857;
+  }
+  .sudeste {
+    fill: #003857;
+  }
+  .sul {
+    fill: #003857;
+  }
+
+  svg{
+    width: 90%;
+  }
+
+ 
+  .quadrado{
+    display: flex;
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 38%;
+    height: 30px;
+    align-items: center;
+    text-align: justify;
+    justify-content: center;
+    padding: 1px;
+    color: white;
+    font-family: "poppins";
+    
+ 
+  }
+
+  #tabela{
+    display: flex;
+    justify-content: space-around;
+    
+  }
+
+  #foto{
+    background-color: white;
+    width: 50%;
+    height: 75px;
+    border-radius: 90%;
+  }
+
+
+  #perfil{
+   display: flex;
+   justify-content: center;
+  }
+
+  .childmapa{
+    height: 350px;
+    width: 29%;
+    background-color: white;
+  }
+
+
+  .quadrado1{
+    background-color: #E4E4E4;
+    display: flex;
+    border: solid black 1px;
+    border-radius: 10px;
+    width: 35%;
+    height: 30px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 1px;
+    color: black;
+    font-family: "poppins";
+  }
+
