@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+   
+    <link rel="stylesheet" href="style.css">
+    <title>Restruturação</title>
+</head>
+<body>
+    <header>
+    <div class="lateral"> </div>
+    <div id="titulo">
+     <h1>DashBoard</h1>
+     <h2>Censo Escolar</h2>
+    </div>
+    <h3>filtro:</h3>
+    <div class="filtro" onclick="gerarGraficos(), mudar(0)"> Infraestrutura</div>
+    <div class="filtro" onclick="gerarGraficos(), mudar(1)"> Tecnologia</div>
+    <div class="filtro" onclick="gerarGraficos(), mudar(2)"> Ensino</div>
+    <div class="filtro" onclick="gerarGraficos(), mudar(3)"> Alunos</div>
+    <div class="filtro" style="margin-right:5px;" onclick="gerarGraficos(), mudar(4)"> Professores</div>
+    
+        
+    </header>
+    <main>
+        
+        <div class="lateral"> </div>
+        <div id="conteiner">
+            <div class="caixa"> <img src="mapa-do-brasil-legendado-pintado-regioes.jpg" alt="mapa" width="280px" > Região:<input type="text" name="região" id="região"></div>
+            <div class="caixa"> 
+            <div id="tabela">
+                <div class="quadrado">Região</div>
+                <div class="quadrado">Infraestrutura</div>
+                <div class="quadrado">Ensino</div>
+                <div class="quadrado">Tecnologia</div>
+                <div class="quadrado">Total</div>
+                <div class="quadrado">Nordeste</div>
+                <div class="quadrado">7.5</div>
+                <div class="quadrado">5.2</div>
+                <div class="quadrado">8.0</div>
+                <div class="quadrado">6.5</div>
+                <div class="quadrado">Sudeste</div>
+                <div class="quadrado">6.0</div>
+                <div class="quadrado">6.0</div>
+                <div class="quadrado">8.0</div>
+                <div class="quadrado">5.0</div>
+                <div class="quadrado">Sul</div>
+                <div class="quadrado">7.0</div>
+                <div class="quadrado">5.0</div>
+                <div class="quadrado">7.0</div>
+                <div class="quadrado">5.7</div>
+                <div class="quadrado">Centro-Oeste</div>
+                <div class="quadrado">6.0</div>
+                <div class="quadrado">5.0</div>
+                <div class="quadrado">7.0</div>
+                <div class="quadrado">5.4</div>
+                <div class="quadrado">Norte</div>
+                <div class="quadrado">6.0</div>
+                <div class="quadrado">4.0</div>
+                <div class="quadrado">5.0</div>
+                <div class="quadrado">5.2</div>
+            </div>
+            </div>
+                <div class="grafico"> 
+                    <canvas id="grafico1">
+
+                    </canvas>
+                </div>
+                <div class="grafico"> 
+                    <canvas id="grafico2">
+
+
+                    </canvas>
+                </div>
+        </div>
+        
+        
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
