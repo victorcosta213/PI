@@ -1,114 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
+body {
+  display: flex;
+  background-color: #f4f4f4;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: "Poppins", sans-serif;
 }
 
-header{
-    background-color: #F4F4F4;
-    width: 100%;
-    height: 15vh;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-   
+* {
+  padding: 0;
+  margin: 0;
 }
 
-main{
-    display: flex;
-    background-color: #F4F4F4;
-    height: 85vh;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  
+h1 {
+  margin-top: 30px;
+  font-size: 24px;
 }
 
-.lateral{
-    height: 85vh;
-    width: 15%;
-    background-color: #003857;
+h2 {
+  font-size: 18px;
 }
 
-#titulo{
-    width: 12%;
-    height: 100%;
-    
+header {
+  background-color: #f4f4f4;
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
 }
 
-.filtro{
-    background-color: white;
-    width: 10%;
-    height: 40%;
-    box-shadow: 1px 1px 1px  #003857 ;
-    border: solid 0.1px #003857;
-    border-radius: 10px ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+img {
+  margin-top: 50px;
+  width: 400px;
 }
 
-.caixa{
-   
-    width: 50%;
-    height: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
+.lateral {
+  width: 150px;
+  height: 580px;
+  background-color: #2a10f8;
 }
 
-.grafico{
-   
-    width: 33%;
-    height: 50%;
-    
+#titulo {
+  width: 12%;
+  height: 100%;
 }
 
-#conteiner{
-    display: flex;
-    flex-wrap: wrap;
-   
-    width: 85%;
-    height: 85vh;
+.filtro {
+  background-color: white;
+  width: 150px;
+  height: 31px;
+  box-shadow: 1px #2a10f8;
+  border: solid 0.1px #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
 }
 
-#tabela{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    width: 100%;
-    height: 100%;
+
+.select {
+  font-family: "Poppins", sans-serif;
+  border-radius: 5px;
+  width: 150px;
+  height: 25px;
 }
 
-.quadrado{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    width: 18%;
-    height: 15%;
-    border: solid black 0.2px;
-    border-radius: 15px;
+.button {
+  font-family: "Poppins", sans-serif;
+  width: 150px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
 }
 
-#grafico1{
-    width: 80% ;
-    height: 100% ;
+.separetor {
+  padding-top: 10px;
 }
 
-#grafico2{
-    width: 80% ;
-    height: 100% ;
+.button:hover {
+  cursor: pointer;
+  background-color: #2a10f8;
+  color: #fff;
 }
 
-#buscar{
-    width: 50%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-   
-    align-items: center;
+.filtro:hover {
+  cursor: pointer;
+  background-color: #2a10f8;
+  color: #fff;
+}
+
+.graficos {
+  width: 25%;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  margin-top: -180px;
+  margin-left: 300px;
+}
+
+.grafico {
+  margin-right: 30px;
+}
+
+#grafico1 {
+  width: 80%;
+  height: 100%;
+}
+
+#grafico2 {
+  width: 80%;
+  height: 100%;
+}
+
+.map {
+  width: 25%;
+}
+
+.tabela1 table {
+  width: 100%;
+}
+
+.tabela1 {
+  width: 50px;
+  height: 300px;
+  padding-right: 500px;
+  margin-right: 20px;
+  padding-top: 50px;
+  display: flex;
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+.tabela1 th,
+.tabela1 td {
+  justify-content: center;
+  text-align: center;
+  padding-right: 25px; /* Adicione o espaçamento desejado entre os dados */
+}
+
+.map img {
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

@@ -17,7 +17,15 @@ let dadosFiltro =[
     [6.0,4.0,5.0,20,30],
 ];
 
+document.getElementById('ID_DO_BOTAO_1').addEventListener('click', function() {
+    document.getElementById('reg').value = 'nordeste';
+    testando();
+    receber();
+});
 
+document.getElementById('ID_DO_BOTAO_2').addEventListener('click', function() {
+    // Adicione a lógica desejada para o segundo botão
+});
 
 function gerarGrafico(regiao) {
     const ctxMyChart = document.getElementById('myChart');
