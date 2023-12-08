@@ -1,6 +1,6 @@
 # PI
 
-Atividades relacionadas a Projeto integrador Unicap
+Projeto Integrador da UNICAP 
 
 `Acesso remoto ao projeto (LINK): `
 * pi-nine.vercel.app
@@ -12,7 +12,7 @@ Atividades relacionadas a Projeto integrador Unicap
 * victor Costa.
 
 # Descrição do projeto
-* Dashboard baseado no censo escolar do Brasil em 2022;
+* Dashboard baseado no censo escolar do Brasil de 2022;
 * Feito a partir de tratamento, filtragem e análise dos dados;
 * Feito para plataforma web, prototipação feita no figma;
 * Está hospedado pela plataforma `VERCEL`;
