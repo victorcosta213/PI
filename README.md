@@ -21,8 +21,15 @@ Projeto Integrador da UNICAP
 * Pode-se definir um filtro para cada região;
   
 # OBJETIVO
-Verificar, através do dados do censo escolar, as regiões do brasil que precisam de um cuidado a mais em relação a educação. E o que é necessário investir em cada Região para melhorar a qualidade da educação
+Verificar, através do dados do censo escolar, as regiões do brasil que precisam de um cuidado a mais em relação a educação. E o que é necessário investir em cada Região para melhorar a qualidade da educação.
 
+# Desenvolvimento
+* Incialmente com esboços visuais, após definido, Prototipamos na plataforma `FIGMA`. E partimos para o HTML;
+* Para o escopo do site foi utilizada a estrtura básica do html;
+* A organização visual foi feita com o css, por meio dos id's e classes;
+* As funcionalidades foram feitascom o javascript. Para a geração dos gráficos utilizamos a biblioteca Chart.js;
+* A hospedagem foi realizada gratuitamente através da plataforma `VERCEL`.
+  
 # Funcionamento
 * Escolha uma região selecionando-a na lista de opções
 * Em seguida, aperte o botão `"clique"`. Gráfico serão mostrados.
