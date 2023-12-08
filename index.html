@@ -15,10 +15,10 @@
     <header>
         <div class="lateral"> </div>
         <div id="titulo">
-         <h1>DashBoard</h1>
-         <h2>Censo Escolar</h2>
+         <h1 style="font-size: 36px;">DashBoard</h1>
+         <h2 style="font-size: 16px;">Censo Escolar</h2>
         </div>
-        <h3>filtro:</h3>
+        <h3 style="margin-left: 50px;">Filtros:</h3>
         <div class="filtro" onclick="gerarGraficoFiltro(1)"> Infraestrutura</div>
         <div class="filtro" onclick="gerarGraficoFiltro(2)"> Tecnologia</div>
         <div class="filtro" onclick="gerarGraficoFiltro(3)"> Ensino</div>
@@ -31,27 +31,27 @@
         <div class="lateral"> </div>
         <div id="conteiner">
             <div class="caixa">
-                <img src="mapa-do-brasil-legendado-pintado-regioes.png" alt="mapa" width="280px" > <div id="buscar">
+                <img src="mapa-do-brasil-legendado-pintado-regioes.png" alt="mapa" width="280px" > <div id="buscar" style="font-size: 16px;">
                     Escolha uma Região
-                    <select name="reg" id="reg">
+                    <select name="reg" id="reg" class="reg">
                         <option value="nordeste">nordeste</option>
                         <option value="sudeste">sudeste</option>
                         <option value="norte">norte</option>
                         <option value="sul">sul</option>
                         <option value="centro-oeste">centro-oeste</option>
                      </select>
-                     <button onclick="testando(),receber()">clique</button>
+                     <button onclick="testando(),receber()" class="click">clique</button>
                 
                 </div>
             </div>
             
             <div class="caixa">
-                <div id="tabela">
-                    <div class="quadrado">Região</div>
-                    <div class="quadrado">Infraestrutura</div>
-                    <div class="quadrado">Ensino</div>
-                    <div class="quadrado">Tecnologia</div>
-                    <div class="quadrado">Total</div>
+                <div id="tabela" class="tabela">
+                    <div class="quadrado" style="font-weight: 600; background-color: #E4E4E4;">Região</div>
+                    <div class="quadrado" style="font-weight: 600; background-color: #E4E4E4;">Infraestrutura</div>
+                    <div class="quadrado" style="font-weight: 600; background-color: #E4E4E4;">Ensino</div>
+                    <div class="quadrado" style="font-weight: 600; background-color: #E4E4E4;">Tecnologia</div>
+                    <div class="quadrado" style="font-weight: 600; background-color: #E4E4E4;">Total</div>
                     <div class="quadrado" id="sudeste">Sudeste</div>
                     <div class="quadrado" id="sudeste">181579</div>
                     <div class="quadrado" id="sudeste">37586</div>
@@ -77,10 +77,9 @@
                     <div class="quadrado" id="Centro-Oeste">7706</div>
                     <div class="quadrado" id="Centro-Oeste">24227</div>
                     <div class="quadrado" id="Centro-Oeste">21026</div>
-                    
                 </div>
             </div>
-            
+
             <div class="grafico">
                 <canvas id="myChart1"></canvas>
             </div>
